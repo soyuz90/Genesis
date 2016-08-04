@@ -1,0 +1,27 @@
++--------+----------+------------------------------+----------------------+---------------------------------------------------------------+------------+
+| Domain | Method   | URI                          | Name                 | Action                                                        | Middleware |
++--------+----------+------------------------------+----------------------+---------------------------------------------------------------+------------+
+|        | GET|HEAD | /                            |                      | Closure                                                       |            |
+|        | GET|HEAD | _debugbar/assets/javascript  | debugbar.assets.js   | Barryvdh\Debugbar\Controllers\AssetController@js              |            |
+|        | GET|HEAD | _debugbar/assets/stylesheets | debugbar.assets.css  | Barryvdh\Debugbar\Controllers\AssetController@css             |            |
+|        | GET|HEAD | _debugbar/clockwork/{id}     | debugbar.clockwork   | Barryvdh\Debugbar\Controllers\OpenHandlerController@clockwork |            |
+|        | GET|HEAD | _debugbar/open               | debugbar.openhandler | Barryvdh\Debugbar\Controllers\OpenHandlerController@handle    |            |
+|        | POST     | admin/roles                  | admin.roles.store    | App\Http\Controllers\RolesController@store                    |            |
+|        | GET|HEAD | admin/roles                  | admin.roles.index    | App\Http\Controllers\RolesController@index                    |            |
+|        | GET|HEAD | admin/roles/create           | admin.roles.create   | App\Http\Controllers\RolesController@create                   |            |
+|        | DELETE   | admin/roles/{roles}          | admin.roles.destroy  | App\Http\Controllers\RolesController@destroy                  |            |
+|        | GET|HEAD | admin/roles/{roles}          | admin.roles.show     | App\Http\Controllers\RolesController@show                     |            |
+|        | PUT      | admin/roles/{roles}          | admin.roles.update   | App\Http\Controllers\RolesController@update                   |            |
+|        | PATCH    | admin/roles/{roles}          |                      | App\Http\Controllers\RolesController@update                   |            |
+|        | GET|HEAD | admin/roles/{roles}/edit     | admin.roles.edit     | App\Http\Controllers\RolesController@edit                     |            |
+|        | POST     | auth/login                   | auth/login           | App\Http\Controllers\Auth\AuthController@postLogin            | guest      |
+|        | GET|HEAD | auth/login                   |                      | App\Http\Controllers\Auth\AuthController@getLogin             | guest      |
+|        | GET|HEAD | auth/logout                  | auth/logout          | App\Http\Controllers\Auth\AuthController@getLogout            |            |
+|        | POST     | auth/register                | auth/register        | App\Http\Controllers\Auth\AuthController@postRegister         | guest      |
+|        | GET|HEAD | auth/register                |                      | App\Http\Controllers\Auth\AuthController@getRegister          | guest      |
+|        | GET|HEAD | home                         |                      | App\Http\Controllers\HomeController@index                     | auth       |
+|        | GET|HEAD | password/email               | password/email       | App\Http\Controllers\Auth\PasswordController@getEmail         | guest      |
+|        | POST     | password/email               | password/postEmail   | App\Http\Controllers\Auth\PasswordController@postEmail        | guest      |
+|        | POST     | password/reset               | password/postReset   | App\Http\Controllers\Auth\PasswordController@postReset        | guest      |
+|        | GET|HEAD | password/reset/{token}       |                      | App\Http\Controllers\Auth\PasswordController@getReset         | guest      |
++--------+----------+------------------------------+----------------------+---------------------------------------------------------------+------------+
